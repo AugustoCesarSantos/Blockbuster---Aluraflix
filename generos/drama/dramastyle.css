@@ -1,0 +1,393 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;1,300;1,400&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;1,300;1,400&display=swap');
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+
+nav{
+  display: flex;
+  height: 150px;
+  width: 100%;
+  background-color: #234899;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px 0 100px;
+  flex-wrap: wrap;
+  position: fixed;
+  z-index: 1
+
+};
+
+
+
+body {
+  font-family: "Roboto Mono", monospace;
+  text-align: center;
+  background-image: url("https://caelum-online-public.s3.amazonaws.com/assets-imersaodev/background-aluraflix.png");
+  background-color: #000000;
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+}
+
+.container {
+  text-align: center;
+  padding: 180px 0px 100px 0px;
+}
+
+.page-title {
+  color: #05205a;
+  margin: 0 0 5px;
+  width: 100%;
+}
+
+.page-subtitle {
+  color: #ffffff;
+  margin-top: 5px;
+}
+
+.alura-logo {
+  width: 32px;
+  position:fixed;
+  top: 10px;
+  right: 10px;
+}
+
+
+.blockbuster-logo {
+  width: 350px;
+  position: absolute;
+  top: -10%;
+  left: 5px;
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+nav ul li{
+  margin: 0 40px;
+}
+
+nav ul li a{
+  color: white;
+  font-weight: 500;
+
+  text-decoration:none;
+  letter-spacing: 1px;
+  padding: 8px 15px;
+  border-radius: 5px;
+  transition: all 0.4s ease ;
+}
+
+.submenu {
+  display: none;
+}
+
+.submenu ul li {
+  padding: 1px 0px 5px 0px;
+}
+
+nav ul li:hover .submenu {
+  display: grid;
+  position: absolute;
+  background-color: #234899;
+  padding: 0px 0px 10px 0px;
+  margin-top: 10px;
+  margin-right: 350px;
+  width: fit-content;
+  border-radius: 5%;
+}
+
+
+
+nav ul li a.active, 
+nav ul li a:hover {
+ background:#F2B705;
+ cursor: pointer;
+ 
+ 
+}
+
+nav .menu-btn i{
+  color: black;
+  cursor: pointer;
+  display: none;
+}
+
+@media (max-width: 920px){
+  nav .menu-btn i {
+    display:inline-flex;
+    right: 30%;
+
+  }
+  
+  nav ul {
+    position: fixed;
+    top: 90px;
+    left: -100%;
+    background-color: #234899;
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+    display: block;
+    transition: all 0.3s ease;
+  }
+
+  nav ul.open {
+      left: 0;
+      z-index: 1;
+  }
+
+  nav ui li {
+      width: 100%;
+      margin: 50px 0;
+      z-index: 1;
+  }
+  nav ui li a {
+    font-size: 23px;
+    z-index: 1;
+  }
+  nav ul li a.active, 
+  nav ul li a:hover {
+  background: none;
+  color: #F2B705;
+  z-index: 1;
+  }
+
+  .submenu {
+    display: none;
+  }
+  
+  nav ul li:hover .submenu {
+    
+    position: relative;
+    background-color:#F2B705; 
+    margin-top: -30%;
+    left: 25%;
+    width: 150px;
+    border-radius: 5%;
+    z-index: 1;
+    height: 250px;
+    padding-top: 18px;
+  }
+  nav ul li:hover .submenu a {
+    
+    margin-left: -19px;
+    
+    
+     
+    text-align:center;
+  }
+
+  nav ul li:hover .submenu a:hover {
+    color: #05205a;  
+  }
+  
+      
+  .container {
+    text-align: center;
+    padding: 130px 0px 100px 0px;
+  }
+  .blockbuster-logo {
+    width: 200px;
+    position: absolute;
+    top: -3%;
+    left: 5px;
+  }
+  nav{
+    display: flex;
+    height: 100px;
+    width: 100%;
+    background-color: #234899;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px 0 100px;
+    flex-wrap: wrap;
+  }
+  .alura-logo {
+    width: 50px;
+    top: 10px;
+    right: 10px;
+  }
+  .imersao-logo {
+    max-width: 70px;  
+    bottom: 0px;
+    right: 3px;
+    transform: rotate(-90deg);
+    transition: all 0.3s ease;
+  }
+  .generos {
+    list-style: none;
+    display: flex;
+    flex-flow: wrap;
+    position: relative;
+  }
+  .generos .genicon .genlogo {
+    width: 25%;
+    position: relative;
+  }
+  
+  .generos .genicon .genlogo:hover {
+    width: 35%;
+    transition: all 0.5s ease;
+  }
+  
+  h1 {
+    font-size: medium;
+    bottom: 0px;
+  }
+
+  h4 {
+    font-size: small;
+    padding: 1px 5px;
+  }
+
+  body > img {
+    margin-top: -50px;
+    margin-left: 16vh;
+    padding-bottom: 120px;
+    align-items: center;
+    width: 120px;
+    display: inline-block;
+    
+  }
+
+}
+
+
+
+.generos {
+  list-style: none;
+  display: flex;
+  flex-flow: wrap;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+  text-decoration:none;
+  text-align: center;
+  position: relative;
+  
+}
+.generos .genicon {
+  padding: 50px;
+  text-decoration:none;
+  text-align: center;
+  
+}
+
+.generos .genicon .genlogo {
+  width: 70%;
+}
+
+.generos .genicon .genlogo:hover {
+  width: 80%;
+  transition: all 0.5s ease;
+
+}
+h4 {
+  color:#000000;
+  padding: 4px 15px;
+  padding-left: 55px;
+  border-radius: 5px;
+  transition: all 0.4s ease ;
+  text-align: center;
+}
+
+
+
+
+footer {
+    background-color: rgb(252, 193, 57);
+    height: auto;
+    width: 100%;
+    color: #000000; 
+    margin:auto;
+    bottom: 0;
+    position: fixed;   
+    
+    
+}
+
+.footer-content{
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+text-align: center;
+
+}
+
+.footer-content p {
+    max-width: 500px;
+    margin-top: 0px;
+    line-height: 40px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.socialmidia {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  
+}
+.socialmidia .icon {
+  padding: 5px;
+}
+
+.socialmidia .icon .smlogo {
+  width: 25px;
+  opacity: 0.8;
+}
+
+.socialmidia .icon .smlogo:hover {
+  width: 35px;
+  transition: all 0.5s ease;
+  background-color: #4b74ce;
+  line-height: 10px;
+  padding-bottom: -5px;
+}
+
+.footer-bottom {
+  text-align: center;
+  justify-content: center;
+  font-size: 10px;
+  padding-top: 10px;
+}
+
+.imersao-logo {
+  width: 120px;
+  position:fixed;
+  bottom: 40px;
+  right: 5px;
+  border: #000000;
+  border:solid;
+  border-width: 0.01ch;
+  background-color: #05205a;
+  transition: all 0.3s ease;
+
+}
+
+
+@media (min-width: 921px){
+body > img {
+  margin-top: -50px;
+  margin-left: 20vh;
+  padding-bottom: 120px;
+  align-items: center;
+  width: 120px;
+  display: inline-block;
+  
+}
+}
